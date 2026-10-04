@@ -1,0 +1,69 @@
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f3efe6;
+  color: #2b2a28;
+  min-height: 100vh;
+}
+
+.board { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 3px solid #2b2a28;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+.board-header h1 { font-size: 2rem; letter-spacing: -0.5px; }
+.board-header p { color: #6b675f; font-weight: 600; }
+
+.add-form { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+.add-form input {
+  flex: 1; min-width: 200px;
+  padding: 12px 14px; font-size: 1rem;
+  border: 2px solid #2b2a28; border-radius: 6px; background: #fff;
+}
+.add-form select {
+  padding: 12px; font-size: 1rem;
+  border: 2px solid #2b2a28; border-radius: 6px; background: #fff;
+}
+.add-form button {
+  padding: 12px 22px; font-size: 1rem; font-weight: 700;
+  background: #2b2a28; color: #f3efe6;
+  border: none; border-radius: 6px; cursor: pointer;
+}
+.add-form button:hover { background: #c4472f; }
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.task-card {
+  background: #fffdf8;
+  border: 2px solid #2b2a28;
+  border-left-width: 10px;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 4px 4px 0 #2b2a28;
+}
+.task-id { font-size: 0.75rem; color: #8a857b; }
+.task-title { font-size: 1.05rem; margin: 6px 0 12px; }
+.task-category {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px; color: #fff;
+}
+
+.cat-academic { border-left-color: #2f6fb0; }
+.cat-academic .task-category { background: #2f6fb0; }
+.cat-library { border-left-color: #3d8b5a; }
+.cat-library .task-category { background: #3d8b5a; }
+.cat-society { border-left-color: #c4472f; }
+.cat-society .task-category { background: #c4472f; }
+.cat-sports { border-left-color: #d49a1f; }
+.cat-sports .task-category { background: #d49a1f; }
